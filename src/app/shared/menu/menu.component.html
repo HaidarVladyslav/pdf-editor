@@ -1,0 +1,64 @@
+<div class="menu">
+    <div class="menu-left">
+        <div class="menu-view">
+            <button matTooltip="Document view" mat-button class="menu-btn">
+                <mat-icon> list_alt</mat-icon>
+            </button>
+            <mat-divider vertical [style.height.%]="100" [style.border-right-color]="'red'"></mat-divider>
+            <button matTooltip="Pages view" mat-button class="menu-btn">
+                <mat-icon>view_module</mat-icon>
+            </button>
+        </div>
+        <div class="menu-visible">
+            <button matTooltip="Thumbnail view" mat-button class="menu-btn menu-btn__last">
+                <mat-icon>view_list</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="menu-middle">
+        <div class="menu-middle__left">
+            <button matTooltip="Select (V)" mat-button class="menu-btn menu-btn-middle">
+                <mat-icon>swipe_up</mat-icon>
+            </button>
+            <button matTooltip="Pencil (P)" mat-button class="menu-btn menu-btn-middle">
+                <mat-icon>create</mat-icon>
+            </button>
+            <button matTooltip="Highlighter (H)" mat-button class="menu-btn menu-btn-middle">
+                <mat-icon>brush</mat-icon>
+            </button>
+            <button matTooltip="Eraser (E)" mat-button class="menu-btn menu-btn-middle">
+                <mat-icon>mic_external_on</mat-icon>
+            </button>
+        </div>
+        <mat-divider vertical [style.margin.px]="'0 3'" [style.height.px]="35" [style.border-right-color]="'#c76969'">
+        </mat-divider>
+        <div class="menu-middle__right">
+            <button matTooltip="Highlight text (W)" mat-button class="menu-btn menu-btn-middle">
+                <mat-icon>text_format</mat-icon>
+            </button>
+            <button matTooltip="Text (T)" mat-button class="menu-btn menu-btn-middle">
+                <mat-icon> title</mat-icon>
+            </button>
+            <select class="menu-btn menu-btn-middle" matTooltip="Shapes (R)" appearance="fill" (selectionChange)="changeSelection($event)" [(ngModel)]="selectedOption">
+                <option value="rectangle">&#11036;</option>
+                <option value="circle">&#9898;</option>
+                <option value="line">&#10134;</option>
+                <option value="arrow">&#11013;</option>
+            </select>
+            <button matTooltip="Insert image (I)" mat-button class="menu-btn menu-btn-middle">
+                <mat-icon>image</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="menu-right">
+        <button [disabled]="isDisabledRedUnd" matTooltip="Undo" mat-button class="menu-btn menu-btn-right">
+            <mat-icon>undo</mat-icon>
+        </button>
+        <button [disabled]="isDisabledRedUnd" matTooltip="Redo" mat-button class="menu-btn menu-btn-right">
+            <mat-icon>redo</mat-icon>
+        </button>
+        <button matTooltip="Search" mat-button class="menu-btn menu-btn-right">
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+</div>

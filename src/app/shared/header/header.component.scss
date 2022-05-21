@@ -1,0 +1,138 @@
+:host {
+    width: 100%;
+}
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+
+    &-left {
+        display: flex;
+    }
+
+    &-logo {
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    &-details {
+        font-size: .8rem;
+        line-height: 1em;
+
+        &__top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        &__actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 8px;
+
+            & button {
+                padding: 0;
+                max-width: fit-content;
+                font-size: .5rem;
+                cursor: pointer;
+                margin-right: 6px;
+
+                & mat-icon {
+                    background-color: rgb(199, 120, 120);
+                    font-size: 1rem;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 3px;
+                    vertical-align: text-bottom;
+                }
+            }
+        }
+    }
+
+    &-right {
+        max-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-actions {
+        display: flex;
+        &__select {
+            max-height: 100%;
+        }
+    }
+}
+
+.mat-button {
+    min-width: auto;
+}
+
+.mat-form-field {
+    font-size: .75rem;
+    padding-bottom: 0;
+    width: 150px;
+}
+
+.mat-badge-content.mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+
+.select {
+    &-header {
+        display: flex;
+        align-items: center;
+    }
+
+    &-logo {
+        width: 30px;
+        height: auto;
+    }
+}
+
+.navbar {
+    &-btn {
+        margin: 0 6px;
+        background-color: rgba(255,255,255,.1);
+        
+
+        &.account {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.75rem;
+        }
+    }
+}
+
+.btn-acc {
+    background: inherit;
+    margin-left: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.load-btn {
+    height: 100%;
+}
+
+.navbar-load {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(41, 36, 90);
+}

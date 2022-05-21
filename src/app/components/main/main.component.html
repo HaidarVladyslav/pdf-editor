@@ -1,0 +1,8 @@
+<ng-container *ngIf="documentData">
+    <ng-container *ngFor="let data of documentData">
+        <ng-container *ngFor="let page of data.content">
+            <app-page [text]="page.text"></app-page>
+        </ng-container>
+    </ng-container>    
+</ng-container>
+

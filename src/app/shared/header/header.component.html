@@ -1,0 +1,74 @@
+<nav class="navbar">
+    <div class="navbar-left">
+        <div class="navbar-logo">
+            <img src="assets\logo.svg" alt="logo">
+        </div>
+        <div class="navbar-details">
+            <div class="navbar-details__top">
+                <p class="navbar-details__title">
+                    {{ fileName }}
+                </p>
+                <div class="navbar-details__actions">
+                    <button matTooltip="Rename" mat-button>
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button matTooltip="Protect PDF" (click)="toggleLock()" mat-button>
+                        <mat-icon *ngIf="!isLocked">lock_open</mat-icon>
+                        <mat-icon *ngIf="isLocked">lock</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="navbar-details__bottom">
+                <p class="navbar-details__size">
+                    {{ fileSize }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-right">
+        <div class="navbar-actions">
+            <div class="navbar-actions__select">
+                <mat-form-field class="navbar-btn" appearance="fill">
+                    <mat-label class="select-header">
+                        <!-- <img class="select-logo" src="assets\tools\main.svg" alt="tools"> -->
+                        <p>Tools</p>
+                    </mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let tool of tools" [value]="tool.value">
+                            {{tool.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <button class="navbar-btn" mat-button>
+                <mat-icon>print</mat-icon>
+            </button>
+            <button class="navbar-btn" mat-button>
+                <mat-icon>share</mat-icon>
+            </button>
+            <button class="navbar-btn" mat-button>
+                <mat-icon> publish</mat-icon>
+                Export
+            </button>
+            <div class="navbar-btn navbar-load">
+                <button class="load-btn" mat-button>
+                    <mat-icon>save_alt</mat-icon>
+                    Download
+                </button>
+                <mat-divider vertical [style.height.%]="100" [style.border-right-color]="'#fff'"></mat-divider>
+                <mat-select [style.padding.px]="'0 8'" [style.font-size]="'1rem'" name="loadOptions">
+                    <mat-option *ngFor="let option of loadOptions" [value]="option.value">
+                      {{option.viewValue}}
+                    </mat-option>
+                  </mat-select>
+            </div>
+            
+        </div>
+        <mat-divider vertical [style.height.%]="90" [style.border-right-color]="'#c76969'" [style.margin.px]="'0 6'"></mat-divider>
+        <div class="navbar-account">
+            <button class="btn-acc">
+                <mat-icon class="navbar-btn account">account_circle</mat-icon>
+            </button>
+        </div>
+    </div>
+</nav>
